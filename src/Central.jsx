@@ -495,9 +495,9 @@ function Central() {
                   </a>
                 </div>
               </div>
-              <div className="d-flex my-3 align-items-center justify-content-start px-3 ml-2 Central-Shadow-Squared">
+              <div className="d-flex my-3 align-items-center justify-content-start ml-2 Central-Shadow-Squared">
                 <p className="text-muted">Show 1 more education</p>
-                <AiOutlineDown className="mb-3 mx-2" />
+                <AiOutlineDown className="mb-3 ml-2" />
               </div>
             </div>
 
