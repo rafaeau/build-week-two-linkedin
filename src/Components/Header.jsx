@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header2.css";
+import "./Header.css";
 import { BsGrid3X3GapFill, BsFillBriefcaseFill ,BsSearch, BsLinkedin} from "react-icons/bs";
 import {MdArrowDropDown } from "react-icons/md";
 import { AiFillHome, AiFillMessage } from "react-icons/ai";
