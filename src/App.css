@@ -1,1 +1,143 @@
-*{margin:0;}
+#Central-Main-Component {
+  max-width: 70vw;
+  max-height: 70vh;
+}
+
+.Central-container {
+  max-width: 800px;
+  border-radius: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.288);
+}
+
+#Central-firstDiv {
+  position: relative;
+}
+
+#Central-img1 {
+  object-fit: cover;
+  width: 800px;
+  height: 250px;
+  border-radius: 8px 8px 0 0;
+}
+
+#Central-avatar {
+  position: absolute;
+  border-radius: 50%;
+  width: 200px;
+  top: 100px;
+  left: 60px;
+}
+
+#Central-pencil1 {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #0a66c2;
+  position: absolute;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid white;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#Central-First > .h3 {
+  margin-top: 4rem;
+}
+
+.Central-p1 {
+  font-size: 15px;
+  text-overflow: ellipsis;
+}
+
+.Central-pencil2 {
+  width: 40px;
+  height: 40px;
+  color: black;
+  padding: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.Central-pencil2:hover {
+  border: 1px solid rgba(128, 128, 128, 0.288);
+  background-color: rgba(128, 128, 128, 0.288);
+  border-radius: 50px;
+  transition: ease-out, 300ms;
+}
+
+#Central-buttons-container {
+  display: flex;
+}
+
+.Central-btn-blue {
+  color: white;
+  background-color: #0a66c2;
+  border-radius: 99px;
+  padding: 5px 10px;
+}
+
+.Central-btn-blue:hover {
+  background-color: #0d4c8b;
+  transition: ease-out, 200ms;
+}
+
+.Central-btn-grey {
+  border-radius: 99px;
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.514);
+}
+
+.Central-btn-round {
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.514);
+}
+
+.Central-btn-grey:hover,
+.Central-btn-round:hover {
+  border: 1px solid rgb(0, 0, 0);
+  transition: ease-out, 200ms;
+}
+
+.Central-random-post-img {
+  width: 70px;
+  height: 80px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.Central-decoration-none {
+  color: black;
+}
+
+.Central-Plus-Icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 2px;
+}
+
+.Central-Plus-Icon:hover {
+  border: 1px solid rgba(128, 128, 128, 0.288);
+  background-color: rgba(128, 128, 128, 0.288);
+  border-radius: 50%;
+  transition: ease-out, 300ms;
+}
+
+.Central-Shadow-Squared {
+  border: 1px solid transparent;
+  width: 250px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.Central-Shadow-Squared:hover {
+  border: 1px solid rgba(128, 128, 128, 0.288);
+  background-color: rgba(128, 128, 128, 0.288);
+  border-radius: 8px;
+  transition: ease-out, 100ms;
+}
