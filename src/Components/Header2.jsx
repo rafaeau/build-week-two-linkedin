@@ -1,4 +1,4 @@
-import "./Header.css"
+
 import React from "react";
 import "./Header2.css";
 import { BsGrid3X3GapFill, BsFillBriefcaseFill ,BsSearch, BsLinkedin} from "react-icons/bs";
@@ -22,26 +22,28 @@ function Header() {
       </div>
 
       <div className="header__right">
-      <HeaderOption Icon={AiFillHome} title="Home" />
+       <HeaderOption Icon={BsSearch}  title="Search" style={{marginLeft:"-11px" }} id="search_icon"/>
+       <HeaderOption Icon={AiFillHome} title="Home" style={{marginTop:"-3px  "}}/>
         <HeaderOption Icon={HiUsers} title="My Network" />
         <HeaderOption Icon={BsFillBriefcaseFill} title="Jobs" />
         <HeaderOption Icon={AiFillMessage} title="Messaging" />
         <HeaderOption Icon={IoNotificationsSharp} title="Notifications" />
-        <HeaderOption Icon={BiUserCircle} title="Me" />
+        <HeaderOption Icon={BiUserCircle} title="Me" style={{marginLeft:"-11px"}}/>
 
-        <MdArrowDropDown className="mr-5" style={{position:"relative",
-       marginLeft:"-27px",float: 'right', marginTop:"4.5%",
+        <MdArrowDropDown className="mr-3" style={{position:"relative",
+       marginLeft:"-44px",float: 'right', marginTop:"3.5%",
         width:"30px", height:"30px", color:"grey" }}/>
+
       </div>
 
       <div className="header__right2">
-      <HeaderOption Icon={BsGrid3X3GapFill} title="work" />
+      <HeaderOption Icon={BsGrid3X3GapFill} title="work" style={{paddingLeft:"-10%"}}/>
       <MdArrowDropDown style={{position:"relative",
-       marginLeft:"-27px",float: 'right', marginTop:"36%",
-        width:"30px", height:"30px", color:"grey" }}/>
+       marginLeft:"-40px",float: 'right', marginTop:"36%",
+        width:"30px", height:"30px", color:"grey" }}/>  
       </div>
       <div >
-      <a href="">Try Premium for <br /> free</a>
+       <a href="" style={{color:" rgb(191, 146, 80)"}}>Try Premium for <br /> free</a>
       </div>
     </div>
   );
