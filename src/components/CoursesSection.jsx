@@ -10,11 +10,11 @@ const CoursesSection = () => {
                 <div><img src={logo} alt='logo' className='logo-img imgFluid' /><span className='learning ml-1'>LEARNING</span></div>
                 <div>Add new skills with these courses, free for 24 hours</div>
             </div>
-            <div className='ml-3 pt-3'><img src={thumbnail} alt='thumbnail' className='thumbnail imgFluid' /><span className='videos-title ml-1 pt-n3'>Building a GraphQL Project</span></div>
+            <div className='ml-3 pt-3'><img src={thumbnail} alt='thumbnail' className='thumbnail imgFluid' /><span className='videos-title ml-2 pt-n3'>Building a GraphQL Project</span></div>
             <hr/>
-            <div className='ml-3'><img src={thumbnail2} alt='thumbnail' className='thumbnail imgFluid' /><span className='videos-title ml-1'>Build a React Application</span></div>
+            <div className='ml-3'><img src={thumbnail2} alt='thumbnail' className='thumbnail imgFluid' /><span className='videos-title ml-2'>Build a React Application</span></div>
             <hr/>
-            <div className='ml-3'><img src={thumbnail3} alt='thumbnail' className='thumbnail imgFluid' /><span className='videos-title ml-1'>Building Vue and Node Apps</span></div>
+            <div className='ml-3'><img src={thumbnail3} alt='thumbnail' className='thumbnail imgFluid' /><span className='videos-title ml-2'>Building Vue and Node Apps</span></div>
             <hr/>
             <h5 className="see-more-courses">See more courses</h5>
         </div>
