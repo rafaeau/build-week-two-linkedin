@@ -46,10 +46,11 @@
     display: flex;
 
   }
-  
-  .header__right .MuiAvatar-colorDefault {
-    background-color: #70b5f9;
+  .header__right3 a{
+    display: flex;
+      color: #CAAF87;
   }
+  
   
   @media screen and (max-width: 750px) {
     .header__search {
