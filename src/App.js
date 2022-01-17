@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./Components/Header";
 import Central from "./Central";
-import Sidebar from './components/Sidebar';
+import Sidebar from './Components/Sidebar';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div className='container'>
         <div className='row'>
           <div className='col-8 mt-4'>
-            <Central />
+            <Central className='pl-5' />
           </div>
           <div className='col-2 mt-4'>
             <Sidebar />
