@@ -1,6 +1,9 @@
 import "./App.css";
 import { BiPencil } from "react-icons/bi";
-import { AiOutlineDown, AiOutlinePlus } from "react-icons/ai";
+import { BsBookmarkFill, BsFillPeopleFill } from "react-icons/bs";
+import { AiOutlineClose, AiOutlineDown, AiOutlinePlus } from "react-icons/ai";
+import { GiFallingStar } from "react-icons/gi";
+import { FaSatelliteDish } from "react-icons/fa";
 
 function Central() {
   return (
@@ -8,7 +11,7 @@ function Central() {
       {/* START CENTRAL COMPONENTS */}
 
       <div id="Central-Main-Component" className="row my-5 mx-auto">
-        {/* FIrst div container with avatar img */}
+        {/* 1st div container with avatar img */}
         <div
           id="Central-firstDiv"
           className="col-2 col-md-10 Central-container d-flex justify-content-center align-items-center mt-5 mx-auto"
@@ -33,6 +36,21 @@ function Central() {
                     <h3 className="h3">Name Username </h3>
                     <p className="Central-p1 text-muted ml-1 mt-1">(He/Him)</p>
                   </div>
+                  <div className="d-flex justify-content-start align-items-center mx-2 px-1">
+                    <img
+                      className="Central-Strive-img cursor-pointer"
+                      src="https://th.bing.com/th/id/OIP.aYDYDAPxRyTQ9yRbV-ps3wAAAA?w=161&h=180&c=7&r=0&o=5&pid=1.7"
+                      alt=""
+                    />
+                    <div className="mt-3 cursor-pointer">
+                      <a className="Central-decoration-none" href="#">
+                        <p className="Central-p1 font-bolder ml-2">
+                          Strive School
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+
                   <BiPencil id="" className="Central-pencil2" />
                 </div>
 
@@ -60,10 +78,114 @@ function Central() {
             </div>
           </div>
         </div>
-        {/* End Central div container with avatar img */}
+        {/* End 1st div container with avatar img */}
 
-        {/* Start Second Central div container */}
+        {/* Start 2th Central div container */}
+        <div className="col-2 col-md-10 Central-container mt-4 mx-auto ml-3 py-4 ">
+          <div className="d-flex justify-content-between">
+            <div className="d-flex flex-row align-items-center mx-2 px-2 ">
+              <img
+                className="Central-random-post-img"
+                src="https://th.bing.com/th/id/OIP.Nki7V7lfI-FANJdekDi2MwHaLR?w=120&h=183&c=7&r=0&o=5&pid=1.7"
+                alt=""
+              />
+              <h4 className="text-semibold ml-3 mt-2">
+                Stand out in recruiter searches
+                <br />
+                <p className="Central-p1 text-muted mt-2">
+                  Candidates who earn a skill badge are 20% more likely to get
+                  hired
+                </p>
+              </h4>
+            </div>
+            <AiOutlineClose className="Central-cross mr-3" />
+          </div>
+          <div className="d-flex justify-content-end mr-3">
+            <button className="Central-btn-blue">Take skill quiz</button>
+          </div>
+        </div>
+        {/* End 2th Central div container */}
 
+        {/* Start 3th Central div container */}
+        <div className="col-2 col-md-10 Central-container Central-BgColor-Grey mt-4 mx-auto py-4">
+          <div className="d-flex justify-content-between">
+            <div className="d-flex flex-row align-items-center mx-2 px-2 ">
+              <h4 className="text-semibold ml-3 mt-2">
+                Your Dashboard
+                <br />
+                <p className="Central-p1 text-muted mt-2">Private to you</p>
+              </h4>
+            </div>
+            <div className="d-flex justify-content-start">
+              <GiFallingStar />
+              <p className="mx-2">All Star</p>
+            </div>
+          </div>
+          <div className="d-flex flex-column px-3">
+            <div className="Central-Common-border d-flex justify-content-between px-3">
+              <div className="">
+                <a href="#">
+                  <h2 className="Central-Numbers">48</h2>
+                  <p className="Central-P-Under-Number Central-decoration-none">
+                    Who viewed your <br /> profile
+                  </p>
+                </a>
+              </div>
+              <div className="Central-left-border px-3 mr-4">
+                <a href="#">
+                  <h2 className="Central-Numbers">343</h2>
+                  <p className="Central-P-Under-Number Central-decoration-none">
+                    Post views
+                  </p>
+                </a>
+              </div>
+              <div className="Central-left-border px-3">
+                <a href="#">
+                  <h2 className="Central-Numbers">34</h2>
+                  <p className="Central-P-Under-Number Central-decoration-none">
+                    Search appearances
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div className="Central-Common-border d-flex flex-column justify-content-start px-3 my-3">
+              <div className="d-flex justify-content-start align-items-baseline">
+                <FaSatelliteDish className="mr-3" />
+                <a className="Central-decoration-none" href="#">
+                  <p>Creator mode: Off</p>
+                  <p className="">
+                    Get discovered, showcase content on your profile, and get
+                    access to creator tools
+                  </p>
+                </a>
+              </div>
+              <hr />
+              <div className="d-flex justify-content-start align-items-baseline">
+                <BsFillPeopleFill className="mr-3" />
+                <a className="Central-decoration-none" href="#">
+                  <p>My Network</p>
+                  <p className="Central-P-Under-Number">
+                    My Network Manage your connections, events, and interests.
+                    My items
+                  </p>
+                </a>
+              </div>
+              <hr />
+              <div className="d-flex justify-content-start align-items-baseline">
+                <BsBookmarkFill className="mr-3" />
+                <a className="Central-decoration-none" href="#">
+                  <p>My items</p>
+                  <p className="Central-P-Under-Number">
+                    Keep track of your jobs, courses and articles.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* End 3th Central div container */}
+
+        {/* Start 4th Central div container */}
         <div
           id="Central-Second"
           className="col-2 col-md-10 Central-container mt-4 mx-auto ml-3 py-4 "
@@ -85,9 +207,8 @@ function Central() {
             </p>
           </div>
         </div>
-        {/* End Second Central div container */}
-
-        {/* Start Third Central div container */}
+        {/* End 4th Central div container */}
+        {/* Start 5th Central div container */}
         <div
           id="Central-Second"
           className="col-2 col-md-10 Central-container d-flex flex-column justify-content-start mt-4 mx-auto ml-3 py-4"
@@ -168,9 +289,8 @@ function Central() {
             </a>
           </div>
         </div>
-        {/* End Third  Central div container */}
-
-        {/* Start Fourth Central div container */}
+        {/* End 5th  Central div container */}
+        {/* Start 6th Central div container */}
         <div
           id="Central-Second"
           className="col-2 col-md-10 Central-container d-flex flex-column justify-content-start mt-4 mx-auto ml-3 py-4"
@@ -375,9 +495,9 @@ function Central() {
                   </a>
                 </div>
               </div>
-              <div className="d-flex my-3 align-items-center justify-content-start px-3 ml-2 Central-Shadow-Squared">
+              <div className="d-flex my-3 align-items-center justify-content-start ml-2 Central-Shadow-Squared">
                 <p className="text-muted">Show 1 more education</p>
-                <AiOutlineDown className="mb-3 mx-2" />
+                <AiOutlineDown className="mb-3 ml-2" />
               </div>
             </div>
 
@@ -385,7 +505,8 @@ function Central() {
           </div>
           {/*End Education Section */}
         </div>
-        {/* End Fourth Central div container */}
+        {/* End 6th Central div container
+         */}
       </div>
 
       {/* END CENTRAL COMPONENT */}
