@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./Header2.css";
 import { BsGrid3X3GapFill, BsFillBriefcaseFill ,BsSearch, BsLinkedin} from "react-icons/bs";
