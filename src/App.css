@@ -29,6 +29,12 @@ body {
   background-color: #f1f1f1;
 }
 
+.lng-btn-spa {
+  background-color: rgb(10, 102, 194);
+  color: white;
+  border: none;
+}
+
 .ad-wrap {
   border-radius: 8px;
   width: 323px;
@@ -92,4 +98,43 @@ body {
   vertical-align: middle;
   cursor: pointer;
   border-radius: 25px;
+}
+
+.see-more {
+  color: rgb(102, 102, 102);
+  background-color: transparent;
+  height: 33px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.see-more-courses {
+  color: rgb(10, 102, 194);
+  background-color: transparent;
+  height: 33px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.courses-wrap {
+  border-radius: 8px;
+  width: 323px;
+  background-color: white;
+}
+
+.logo-img {
+  height: 20px;
+}
+
+.learning {
+  font-size: 12px;
+}
+
+.thumbnail {
+    height: 60px;
+}
+
+.videos-title {
+    font-size: 13px;
+    font-weight: 700;
 }
