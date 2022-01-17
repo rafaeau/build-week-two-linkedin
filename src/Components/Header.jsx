@@ -22,6 +22,7 @@ function Header() {
       </div>
 
       <div className="header__right">
+      <HeaderOption Icon={BsSearch}  title="Search" style={{marginLeft:"-11px" }} id="search_icon"/>
       <HeaderOption Icon={AiFillHome} title="Home" />
         <HeaderOption Icon={HiUsers} title="My Network" />
         <HeaderOption Icon={BsFillBriefcaseFill} title="Jobs" />
@@ -41,7 +42,7 @@ function Header() {
         width:"30px", height:"30px", color:"grey" }}/>
       </div>
       <div >
-      <a href="">Try Premium for <br /> free</a>
+      <a href="" style={{color:"rgb(206, 163, 103)"}}>Try Premium for <br /> free</a>
       </div>
     </div>
   );
