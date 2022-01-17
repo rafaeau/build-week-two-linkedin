@@ -1,17 +1,53 @@
 .mainDiv{
+    /* display:flex;
+    justify-content:center; */
+    height: 10%;
     background-color:#FFFFFF;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   left: 0;
-  padding: 0 24px;
+  padding-bottom: 0px;
   position: fixed;
-  top: 0;
+  margin-top: -16px;
   width: 100vw;
   z-index: 100;
+  font-size: 12px;
+  font-family: 400;
 }
 
+#logo{
+    margin-left:6.5%;
+}
 #logo > img{
-    width:34px;
-     height:34px;
-   
+    width: 34px;
+    height: 34px;
+}
+.nav_icon {
+    width:24px;
+    height:24px;
+    color: #666;
+    margin-bottom: -10px;
+
+  }
+
+.search{
+    
+    background-color: #EEF3F8;
+    width: 100%;
+    border-color: #aaaaaa;
+    border-style: solid;
+    border-width: 1px;
+    height: 40px;
+    padding-left: 30px;
+        background: url("https://clipground.com/images/search-icon-clipart.png") no-repeat left;
+    background-size:18px;
+    background-position:5px;
 }
 
+.innerDiv{
+   
+    border-right: 1px solid #d1d4d6;
+}
+
+.work{
+    margin-left:2px;
+}
