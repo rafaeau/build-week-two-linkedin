@@ -81,9 +81,9 @@ function Central() {
         {/* End 1st div container with avatar img */}
 
         {/* Start 2th Central div container */}
-        <div className="col-2 col-md-10 Central-container mt-4 mx-auto ml-3 py-4 ">
+        <div className="col-2 col-md-10 Central-container Border-blue mt-4 mx-auto ml-3 py-4 ">
           <div className="d-flex justify-content-between">
-            <div className="d-flex flex-row align-items-center mx-2 px-2 ">
+            <div className="d-flex flex-row align-items-center mx-2 px-2">
               <img
                 className="Central-random-post-img"
                 src="https://th.bing.com/th/id/OIP.Nki7V7lfI-FANJdekDi2MwHaLR?w=120&h=183&c=7&r=0&o=5&pid=1.7"

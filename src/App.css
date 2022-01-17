@@ -113,6 +113,10 @@
   padding: 4px;
 }
 
+.Border-blue {
+  border-top: 5px solid #0d4c8b;
+}
+
 .Central-Common-border {
   max-width: fill;
   border-radius: 8px;
