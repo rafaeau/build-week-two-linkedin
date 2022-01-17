@@ -1,3 +1,8 @@
+#Central-Main-Component {
+  max-width: 70vw;
+  max-height: 70vh;
+}
+
 .Central-container {
   max-width: 800px;
   border-radius: 8px;
@@ -93,4 +98,46 @@
 .Central-btn-round:hover {
   border: 1px solid rgb(0, 0, 0);
   transition: ease-out, 200ms;
+}
+
+.Central-random-post-img {
+  width: 70px;
+  height: 80px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.Central-decoration-none {
+  color: black;
+}
+
+.Central-Plus-Icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 2px;
+}
+
+.Central-Plus-Icon:hover {
+  border: 1px solid rgba(128, 128, 128, 0.288);
+  background-color: rgba(128, 128, 128, 0.288);
+  border-radius: 50%;
+  transition: ease-out, 300ms;
+}
+
+.Central-Shadow-Squared {
+  border: 1px solid transparent;
+  width: 250px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.Central-Shadow-Squared:hover {
+  border: 1px solid rgba(128, 128, 128, 0.288);
+  background-color: rgba(128, 128, 128, 0.288);
+  border-radius: 8px;
+  transition: ease-out, 100ms;
 }
