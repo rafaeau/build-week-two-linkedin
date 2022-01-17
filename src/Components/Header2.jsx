@@ -28,15 +28,20 @@ function Header() {
         <HeaderOption Icon={AiFillMessage} title="Messaging" />
         <HeaderOption Icon={IoNotificationsSharp} title="Notifications" />
         <HeaderOption Icon={BiUserCircle} title="Me" />
-        <MdArrowDropDown style={{position:"relative",
+
+        <MdArrowDropDown className="mr-5" style={{position:"relative",
        marginLeft:"-27px",float: 'right', marginTop:"4.5%",
         width:"30px", height:"30px", color:"grey" }}/>
       </div>
+
       <div className="header__right2">
       <HeaderOption Icon={BsGrid3X3GapFill} title="work" />
       <MdArrowDropDown style={{position:"relative",
        marginLeft:"-27px",float: 'right', marginTop:"36%",
         width:"30px", height:"30px", color:"grey" }}/>
+      </div>
+      <div >
+      <a href="">Try Premium for <br /> free</a>
       </div>
     </div>
   );
