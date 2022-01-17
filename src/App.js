@@ -1,14 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Header from "./Components/Header";
 import Central from "./Central";
-import Sidebar from './components/Sidebar';
+import Sidebar from './Components/Sidebar';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./Components/Header"
-
 import Footer from "./Components/Footer";
-import Sidebar from './Components/Sidebar';
+
 
 function App() {
   return (
@@ -24,9 +22,7 @@ function App() {
           </div>
         </div>
       </div>
-     
-      <Header />
-      
+              
       <Footer/>
     </>
   );
