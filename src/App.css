@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(243, 242, 239);
+}
+
+.language-bar {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: white;
+  border-radius: 7px;
+  width: min-content;
+}
+
+.lng-btn {
+  border: rgb(102,102,102) solid 1px;
+  color: rgb(102,102,102);
+  background-color: transparent;
+  height: 33px;
+  font-weight: 600;
+  margin: 15px 7px;
+  text-align: center;
+  align-content: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+#lng-btn:hover {
+  background-color: #f1f1f1;
+}
