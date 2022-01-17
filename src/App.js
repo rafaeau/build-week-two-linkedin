@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+import Ad from './components/Ad';
 import LanguageBar from './components/LanguageBar';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         </div>
         <div className='col-2 mt-4'>
           <LanguageBar/>
+          <Ad/>
         </div>
       </div>
     </div>
