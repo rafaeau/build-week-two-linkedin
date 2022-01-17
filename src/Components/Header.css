@@ -46,10 +46,15 @@
     display: flex;
 
   }
-  
-  .header__right .MuiAvatar-colorDefault {
-    background-color: #70b5f9;
+
+  .try_premium{
+    display: flex;
+    justify-content: center;
+align-self: center;
+text-overflow: ellipsis;
+overflow: hidden;
   }
+  
   
   @media screen and (max-width: 750px) {
     .header__search {

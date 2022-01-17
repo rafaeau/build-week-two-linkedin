@@ -31,18 +31,18 @@ function Header() {
         <HeaderOption Icon={BiUserCircle} title="Me" />
 
         <MdArrowDropDown className="mr-5" style={{position:"relative",
-       marginLeft:"-27px",float: 'right', marginTop:"4.5%",
+       marginLeft:"-42px",float: 'right', marginTop:"2.9%",
         width:"30px", height:"30px", color:"grey" }}/>
       </div>
 
       <div className="header__right2">
       <HeaderOption Icon={BsGrid3X3GapFill} title="work" />
       <MdArrowDropDown style={{position:"relative",
-       marginLeft:"-27px",float: 'right', marginTop:"36%",
+       marginLeft:"-38px",float: 'right', marginTop:"35%",
         width:"30px", height:"30px", color:"grey" }}/>
       </div>
-      <div >
-      <a href="" style={{color:"rgb(206, 163, 103)"}}>Try Premium for <br /> free</a>
+      <div className="try_premium" >
+      <a href="" style={{color:"rgb(206, 163, 103)"}}>Try Premium for free</a>
       </div>
     </div>
   );
