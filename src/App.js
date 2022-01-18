@@ -14,7 +14,7 @@ function App() {
       <Header />
       <div className='container'>
         <div className='row mt-4'>
-          <div className='col-9'>
+          <div className='col-9 ml-n5'>
             <Central className='' />
           </div>
           <div className='col-2'>
