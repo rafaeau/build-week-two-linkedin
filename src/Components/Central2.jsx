@@ -34,18 +34,18 @@ function Central(props) {
               <div className="mx-2 px-2 d-flex flex-column justify-content-start ">
                 <div className="d-flex flex-row justify-content-between">
                   <div className="d-flex flex-row mt-5">
-                    <h3 className="h3">{props?.user.name} {props?.user.surname} </h3>
+                    <h3 className="h3"> </h3>
                   </div>
                   <div className="d-flex justify-content-start align-items-center mx-2 px-1">
                     <img
                       className="Central-Strive-img cursor-pointer"
-                      src={props?.user.image}
+                     
                       alt=""
                     />
                     <div className="mt-3 cursor-pointer">
                       <a className="Central-decoration-none" href="#">
                         <p className="Central-p1 font-bolder ml-2">
-                          {props?.user.title}
+                          
                         </p>
                       </a>
                     </div>
@@ -54,15 +54,14 @@ function Central(props) {
                   <BiPencil id="" className="Central-pencil2" />
                 </div>
 
-                <h6 className="text-semibold">Random stuff about {props?.user.name}</h6>
-                
+                <h6 className="text-semibold"></h6>
 
                 <a className="Central-p1 my-2 text-muted" href="#">
                   Strive school
                 </a>
 
                 <p className="Central-p1 text-muted">
-                  {props?.user.area} - <a href="">Contact Info</a>
+                   - <a href="">Contact Info</a>
                 </p>
                 <a href="">500+ connections</a>
               </div>
@@ -197,7 +196,14 @@ function Central(props) {
           </div>
           <div className="d-flex flex-column justify-content-start mt-4 mx-2 px-2 ">
             <p className="Central-p1 text-muted">
-            {props?.user.bio}
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod,
+              fugit quae quaerat sint corrupti adipisci ut iure cupiditate ipsam
+              id illo non, animi architecto quos, ullam doloremque laudantium
+              repellendus consectetur. Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. Recusandae quasi molestias rerum eaque
+              accusantium similique quisquam ducimus voluptates, incidunt
+              laboriosam eligendi nemo dolorem sapiente fugit sint iusto ratione
+              ad! Consectetur.
             </p>
           </div>
         </div>

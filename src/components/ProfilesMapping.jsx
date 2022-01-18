@@ -12,7 +12,7 @@ const ProfilesMapping = ({btn}) => {
 
     return (
         <>
-            {profiles && profiles.slice(0, 5).map((profile) => (
+            {profiles && profiles.slice(295, 300).map((profile) => (
                 <Link to={'profile/' + profile._id + '/experiences'}><SingleProfile key={profile._id} btn={btn} profile={profile} /></Link>
             ))}
         </>

@@ -1,15 +1,7 @@
 import { BiPencil } from "react-icons/bi";
 import { AiOutlineDown, AiOutlinePlus } from "react-icons/ai";
-import { fetchExperiences } from '../apicalls'
-import { useEffect, useState } from "react"
 
-export default function Experience() {
-
-    const [experiences, setExperiences] = useState({});
-
-    useEffect(() => {
-        fetchExperiences('_id').then((res) => setExperiences(res))
-    }, [])
+export default function Experience({ experiences }) {
 
     return (
         <div id="Central-Second"
@@ -22,33 +14,32 @@ export default function Experience() {
 
             <div className="d-flex justify-content-between">
                 <div>
-                {/* {experiences && experiences.map((experience) => ( */}
-                    <>
-                    <div className="d-flex justify-content-start align-items-center mx-2 px-1">
-                        <img
-                            className="Central-random-post-img cursor-pointer"
-                            src="https://th.bing.com/th/id/OIP.0MG3R0maOfwdsab0MDOcywHaHa?w=201&h=200&c=7&r=0&o=5&pid=1.7"
-                            alt=""
-                        />
-                        <div className="mt-3 cursor-pointer">
-                            <a className="Central-decoration-none" href="#">
-                                <p className="Central-p1 font-bolder mx-4">
-                                    Some random Working experience.
-                                    <p className="text-muted">
-                                        Name Company where Name Username worked for
-                                        <br /> Period from... to... when Name Username worked
-                                        for
-                                        <br /> Location Company where Name Username worked at
-                                    </p>
-                                </p>
-                            </a>
+                    {experiences && experiences.map((experience) => (
+                        <div>
+                            <div className="d-flex justify-content-start align-items-center mx-2 px-1">
+                                <img
+                                    className="Central-random-post-img cursor-pointer"
+                                    src={experience?.image}
+                                    alt=""
+                                />
+                                <div className="mt-3 cursor-pointer">
+                                    <a className="Central-decoration-none" href="#">
+                                        <p className="Central-p1 font-bolder mx-4">
+                                            {experience.role}
+                                            <p className="text-muted">
+                                                {experience.company}
+                                                <br /> {experience.description}
+                                                <br /> {experience.area}
+                                            </p>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <hr />
                         </div>
-                    </div>
-                    <hr />
-                    </>
-               {/*  ))} */}
-                   
+                    ))}
                 </div>
+
 
                 <BiPencil id="" className="Central-pencil2" />
             </div>
