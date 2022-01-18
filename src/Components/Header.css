@@ -3,12 +3,12 @@
     top: 0;
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 0.1px solid lightgrey;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
     z-index: 999;
     background-color: white;
+    font-size: 12px;
 
 }
 .header__left {
@@ -44,6 +44,7 @@
   }
   .header__right2 {
     display: flex;
+    justify-content: center;
 
   }
 
@@ -56,7 +57,7 @@ overflow: hidden;
   }
   
   
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 950px) {
     .header__search {
       display: none;
     }
