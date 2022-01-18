@@ -13,11 +13,11 @@ function App() {
     <>
       <Header />
       <div className='container'>
-        <div className='row'>
-          <div className='col-8 mt-4'>
-            <Central className='pl-5' />
+        <div className='row mt-4'>
+          <div className='col-9'>
+            <Central className='' />
           </div>
-          <div className='col-2 mt-4'>
+          <div className='col-2'>
             <Sidebar />
           </div>
         </div>

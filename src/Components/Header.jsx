@@ -36,7 +36,7 @@ function Header() {
       </div>
 
       <div className="header__right2">
-      <HeaderOption Icon={BsGrid3X3GapFill} title="work" />
+      <HeaderOption Icon={BsGrid3X3GapFill} title="Work" />
       <MdArrowDropDown style={{position:"relative",
        marginLeft:"-38px",float: 'right', marginTop:"35%",
         width:"30px", height:"30px", color:"grey" }}/>
