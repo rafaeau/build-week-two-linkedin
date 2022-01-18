@@ -1,7 +1,8 @@
 import adImg from '../assets/linkedin-ad.jpg'
 import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
-const SingleProfile = ({btn, profile}) => {
+const SingleProfile = ({ btn, profile }) => {
 
     return (
         <div className='single-profile-wrap'>

@@ -1,8 +1,9 @@
 import { fetchProfiles } from '../apicalls'
 import { useEffect, useState } from "react"
 import SingleProfile from './SingleProfile'
+import { Link } from 'react-router-dom'
 
-const ProfilesMapping = (props) => {
+const ProfilesMapping = ({btn}) => {
 
     const [profiles, setProfiles] = useState()
     useEffect(() => {
@@ -12,7 +13,7 @@ const ProfilesMapping = (props) => {
     return (
         <>
             {profiles && profiles.slice(0, 5).map((profile) => (
-                <SingleProfile key={profile._id} btn={props.btn} profile={profile} />
+                <Link to={'profile/' + profile._id + '/experiences'}><SingleProfile key={profile._id} btn={btn} profile={profile} /></Link>
             ))}
         </>
     )

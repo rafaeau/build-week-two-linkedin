@@ -1,29 +1,25 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Central from "./Central";
-import Sidebar from './Components/Sidebar';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./Components/Header"
 import Footer from "./Components/Footer";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Profile from "./views/Profile";
+import ProfileExperiences from "./views/ProfileExperiences";
 
 
 function App() {
   return (
     <>
-      <Header />
-      <div className='container'>
-        <div className='row mt-4'>
-          <div className='col-9 ml-n5'>
-            <Central className='' />
-          </div>
-          <div className='col-2'>
-            <Sidebar />
-          </div>
-        </div>
-      </div>
-              
-      <Footer/>
+    <BrowserRouter>
+        <Header />
+      <Routes>
+        <Route exact path='/' element={<Profile/>} />
+        <Route exact path='/profile/:userId/experiences' element={<ProfileExperiences/>} />
+      </Routes>
+        <Footer />
+    </BrowserRouter>
     </>
   );
 }
