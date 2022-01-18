@@ -11,7 +11,7 @@ import Footer from "./Components/Footer";
 function App() {
   return (
     <>
-      <Header />
+      <Header className="mx-5"/>
       <div className='container'>
         <div className='row'>
           <div className='col-8 mt-4'>

@@ -8,10 +8,12 @@ import { IoNotificationsSharp } from "react-icons/io5";
 import { BiUserCircle } from "react-icons/bi";
 import { HiUsers }  from "react-icons/hi";
 import HeaderOption from "./HeaderOption"
+import {Container} from "react-bootstrap"
 
 
 function Header() {
   return (
+    <Container fluid  style={{backgroundColor:"white",borderBottom: "0.1px solid lightgrey"}}>
     <div className="header">
       <div className="header__left">
         <img src="https://www.iconpacks.net/icons/2/free-linkedin-logo-icon-2430-thumb.png" alt="" srcset="" />
@@ -36,15 +38,16 @@ function Header() {
       </div>
 
       <div className="header__right2">
-      <HeaderOption Icon={BsGrid3X3GapFill} title="work" />
+
+      <span><HeaderOption Icon={BsGrid3X3GapFill} title="work" />
       <MdArrowDropDown style={{position:"relative",
-       marginLeft:"-38px",float: 'right', marginTop:"35%",
-        width:"30px", height:"30px", color:"grey" }}/>
-      </div>
+       marginLeft:"-42px",float: 'right', marginTop:"-50%",
+        width:"30px", height:"30px", color:"grey" }}/></span>
+     
       <div className="try_premium" >
       <a href="" style={{color:"rgb(206, 163, 103)"}}>Try Premium for free</a>
-      </div>
-    </div>
+      </div> </div>
+    </div></Container>
   );
 }
 
