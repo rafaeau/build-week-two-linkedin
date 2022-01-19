@@ -1,4 +1,5 @@
 import adImg from '../assets/linkedin-ad.jpg'
+import RightColumnHp from './RightColumnHp'
 
 export default function Homepage() {
     return (
@@ -13,6 +14,7 @@ export default function Homepage() {
                 <hr className="mt-n1" />
                 <h5 className="see-more">See more</h5>
             </div>
+            <RightColumnHp/>
         </>
     )
 }
