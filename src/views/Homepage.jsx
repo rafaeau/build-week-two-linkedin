@@ -1,4 +1,5 @@
 import Ad from '../Components/Ad';
+import LeftColumnHP from '../Components/LeftColumnHP'
 
 export default function Homepage() {
     return (
