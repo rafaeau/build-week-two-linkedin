@@ -366,27 +366,29 @@ body {
 }
 
 .below_innerDiv {
-  display: inline-block;
+  display: inherit;
 }
 
 .right_footer {
   display: flex;
   flex-direction: column;
-  width: 444px;
+  width: 323px;
+  height: fit-content;
   margin-top: 20px;
+ 
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
-  padding-left: 51%;
-  padding-right: 51%;
+ 
 }
 
 .inner_footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
+  margin-bottom: 10px;
 }
 
 .inner_footer > a {
-  color: rgb(145, 140, 140);
+  color: rgb(109, 105, 105);
 }
 

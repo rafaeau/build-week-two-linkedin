@@ -8,7 +8,7 @@ export default function Homepage() {
     <>
       <div className="mt-4 pt-1" id="rightCol_Home">
         <div className=" innerDiv mx-3 mt-2 mb-2">
-          <h5 className="mr-2" style={{ fontWeight: "bold", fontSize: "18px" }}>
+          <h5 className="mr-2" style={{ fontWeight: "bold", fontSize: "16px" }}>
             <span>LinkedIn News</span>
           </h5>
           <BsFillInfoSquareFill />
@@ -35,26 +35,32 @@ export default function Homepage() {
       <Ad/>
 
       <div className="right_footer">
-        <div className="inner_footer">
+        <div className="inner_footer" style={{paddingLeft:"22%", paddingRight:"22%"}}>
           <a href="">About</a>
           <a href="">Accesibiility</a>
           <a href="">Help Center</a>
         </div>
-        <div className="inner_footer">
+        <div className="inner_footer" style={{paddingLeft:"25%", paddingRight:"25%"}}>
           <a href="">Impressum</a>
           <a href="">Privacy & Terms</a>
         </div>
-        <div className="inner_footer">
+        <div className="inner_footer" style={{paddingLeft:"27%", paddingRight:"27%"}}>
           <a href="">Ad choices</a>
-          <a href="">Advertisement</a>
+          <a href="">Advertising</a>
         </div>
-        <div className="inner_footer">
+        <div className="inner_footer"  style={{paddingLeft:"10%", paddingRight:"10%"}}>
           <a href="">Business Services</a>
-          <a href="">Get LinkedIn app</a>
+          <a href="">Get the LinkedIn app</a>
         </div>
-        <div className="inner_footer">
-          <a href="">more</a>
+        <div className="inner_footer"  style={{paddingLeft:"45%", paddingRight:"40%"}}>
+          <a href="">More</a>
         </div>
+      </div>
+
+      <div style={{ width:"320px", marginLeft:"30%", marginTop:"-10%"}}>
+      <img  src="https://download.logo.wine/logo/LinkedIn/LinkedIn-Logo.wine.png" alt="" srcset="" style={{width:"80px"}}/>
+      <span style={{color:"grey", fontSize:"12px", fontWeight:"400"}}>LinkedIn Corporation © 2022</span>
+           
       </div>
     </>
   );
