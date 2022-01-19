@@ -29,7 +29,8 @@
   border-radius: 50%;
   width: 200px;
   top: 100px;
-  left: 60px;
+  left: 30px;
+  object-fit: cover;
 }
 
 .Central-Strive-img {

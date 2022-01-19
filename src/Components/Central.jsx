@@ -26,7 +26,8 @@ function Central(props) {
             />
             <img
               id="Central-avatar"
-              src="https://th.bing.com/th/id/OIP.scExuNqSeL_zvoAQbH0gWAHaHa?w=199&h=199&c=7&r=0&o=5&pid=1.7"
+              src={props?.user.image}
+              style={{ width: "200px", height: "200px", right: "5px" }}
               alt=""
             />
             <BiPencil id="Central-pencil1" />
