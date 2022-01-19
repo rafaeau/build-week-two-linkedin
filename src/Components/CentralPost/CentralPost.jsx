@@ -12,23 +12,44 @@ import { AiOutlineClose } from "react-icons/ai";
 
 function CentralPost() {
   const [show, setShow] = useState(false);
+  const [input, setInput] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   const [posts, setPosts] = useState([]);
-
-  const [input, setInput] = useState("");
 
   useEffect(() => {
     fetchPosts().then((res) => setPosts(res));
   }, []);
 
-  /* const sendPost = (e) => {
-    //e.preventDefault();
-    postNewPost();
-    setPosts(posts);
-  }; */
+  const [postText, setPostText] = useState("");
+  const whatever = { text: postText };
+
+  const sendFetch = async () => {
+    try {
+      console.log("FIRST CONSOLE LOG--------", postText);
+      const resp = await fetch(
+        "https://striveschool-api.herokuapp.com/api/posts/",
+        {
+          method: "POST",
+          headers: {
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiMjFmMTRiYjUzZDAwMTViMTllZDciLCJpYXQiOjE2NDI0NDE3ODksImV4cCI6MTY0MzY1MTM4OX0.c8a_yy-ROyiriWmK5LnQYY8Gmrz8smjTnxvGxtDu-24",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(whatever),
+        }
+      );
+      if (resp.ok) {
+        const postedText = await resp.json();
+        return postedText;
+      } else {
+        console.log("your fetch did not go well!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="centralPost">
@@ -69,8 +90,7 @@ function CentralPost() {
                   </div>
                   <input
                     placeholder="What do you want to talk about?"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
+                    onChange={(e) => setPostText(e.currentTarget.value)}
                     type="text"
                     className="input-modal"
                   />
@@ -79,12 +99,7 @@ function CentralPost() {
                   <Button variant="secondary" onClick={handleClose}>
                     Close
                   </Button>
-                  <Button
-                    variant="primary"
-                    onClick={handleClose}
-                    type="submit"
-                    /* onClick={sendPost}  */
-                  >
+                  <Button variant="primary" onClick={sendFetch} type="submit">
                     Post
                   </Button>
                 </Modal.Footer>

@@ -41,7 +41,7 @@ export const fetchUser = async (userId) => {
 };
 
 export const fetchPosts = async () => {
-  let response = await fetch(
+  const response = await fetch(
     "https://striveschool-api.herokuapp.com/api/posts/",
     {
       headers: {
@@ -50,20 +50,32 @@ export const fetchPosts = async () => {
       },
     }
   );
-  let posts = await response.json();
+  const posts = await response.json();
   return posts;
 };
 
-export const postNewPost = async () => {
-  let resp = await fetch(`https://striveschool-api.herokuapp.com/api/posts/`, {
-    method: "POST",
-    headers: {
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiMjFmMTRiYjUzZDAwMTViMTllZDciLCJpYXQiOjE2NDI0NDE3ODksImV4cCI6MTY0MzY1MTM4OX0.c8a_yy-ROyiriWmK5LnQYY8Gmrz8smjTnxvGxtDu-24",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(),
-  });
-  let postedPosts = await resp.json();
-  return postedPosts;
+export const postNewPost = async (postText) => {
+  try {
+    console.log("FIRST CONSOLE LOG--------", postText);
+    const resp = await fetch(
+      "https://striveschool-api.herokuapp.com/api/posts/",
+      {
+        method: "POST",
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiMjFmMTRiYjUzZDAwMTViMTllZDciLCJpYXQiOjE2NDI0NDE3ODksImV4cCI6MTY0MzY1MTM4OX0.c8a_yy-ROyiriWmK5LnQYY8Gmrz8smjTnxvGxtDu-24",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(postText),
+      }
+    );
+    if (resp.ok) {
+      const postedText = await resp.json();
+      return postedText;
+    } else {
+      console.log("your fetch did not go well!");
+    }
+  } catch (error) {
+    console.log(error);
+  }
 };
