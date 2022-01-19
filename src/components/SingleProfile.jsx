@@ -1,4 +1,4 @@
-import adImg from '../assets/linkedin-ad.jpg'
+import user from '../assets/user.jfif'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ const SingleProfile = ({ btn, profile }) => {
         <div className='single-profile-wrap'>
             <div className='col-2'>
                 <div className="profile-img-sm-wrap">
-                    <img src={adImg} alt='advertisement' className='profile-img-sm imgFluid' />
+                    <img src={user} alt='advertisement' className='profile-img-sm imgFluid' />
                 </div>
             </div>
             <div className='col-10 ml-2'>

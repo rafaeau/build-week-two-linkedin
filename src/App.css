@@ -276,6 +276,11 @@ body {
   font-size: 14px;
 }
 
+.small-grey-txt {
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+}
+
 .people-also-wrap {
   border-radius: 8px;
   width: 323px;
@@ -335,7 +340,7 @@ body {
     font-weight: 700;
 }
 
-.first-card-wrap {
+.card-wrap {
   border-radius: 8px;
   width: 230px;
   background-color: white;
@@ -386,4 +391,7 @@ padding-right: 51%;
 .inner_footer > a{
   color: rgb(145, 140, 140);
   
+}
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
 }
