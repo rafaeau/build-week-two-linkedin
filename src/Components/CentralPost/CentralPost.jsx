@@ -5,18 +5,20 @@ import InputOptions from "./InputOptions";
 import { BiCalendar, BiImage } from "react-icons/bi";
 import { RiArticleFill, RiVideoFill } from "react-icons/ri";
 import Posts from "./Posts";
+import { postNewPost } from "../../apicalls";
 
 function CentralPost() {
   const [posts, setPosts] = useState([]);
   const [input, setInput] = useState("");
 
-  /*  useEffect(() => {
+  useEffect(() => {
     sendPost();
-  }, []); */
+  }, [posts]);
 
-  /*  const sendPost = (e) => {
-    e.preventDefault();
-  }; */
+  const sendPost = (e) => {
+    //e.preventDefault();
+    postNewPost();
+  };
 
   return (
     <div className="centralPost">
@@ -30,7 +32,9 @@ function CentralPost() {
               onChange={(e) => setInput(e.target.value)}
               type="text"
             />
-            <button /* onClick={sendPost}  */ type="submit">Send</button>
+            <button onClick={sendPost} type="submit">
+              Send
+            </button>
           </form>
         </div>
         <div className="Central-inputOptions">
