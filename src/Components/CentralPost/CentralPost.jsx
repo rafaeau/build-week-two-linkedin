@@ -5,21 +5,23 @@ import InputOptions from "./InputOptions";
 import { BiCalendar, BiImage } from "react-icons/bi";
 import { RiArticleFill, RiVideoFill } from "react-icons/ri";
 import Posts from "./Posts";
-import { postNewPost } from "../../apicalls";
+import { fetchPosts, postNewPost } from "../../apicalls";
 
 function CentralPost() {
   const [posts, setPosts] = useState([]);
+
   const [input, setInput] = useState("");
 
   useEffect(() => {
-    sendPost();
-  }, [posts]);
+    fetchPosts();
+    // sendPost();
+  }, []);
 
-  const sendPost = (e) => {
+  /* const sendPost = (e) => {
     //e.preventDefault();
     postNewPost();
     setPosts(posts);
-  };
+  }; */
 
   return (
     <div className="centralPost">
@@ -33,9 +35,7 @@ function CentralPost() {
               onChange={(e) => setInput(e.target.value)}
               type="text"
             />
-            <button onClick={sendPost} type="submit">
-              Send
-            </button>
+            <button /* onClick={sendPost}  */ type="submit">Send</button>
           </form>
         </div>
         <div className="Central-inputOptions">
@@ -54,9 +54,13 @@ function CentralPost() {
       {/* START POSTS */}
 
       {/* MAP THE POSTS AFTER POSTING THEM IN FETCH */}
-      {/*  {posts.map((post) => (
-        <Posts />
-      ))} */}
+      {posts.map((post) => (
+        <Posts
+        /* name={}
+          description={}
+          message={} */
+        />
+      ))}
 
       <Posts
         name="Name Username"

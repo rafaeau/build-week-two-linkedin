@@ -1,6 +1,6 @@
-import Ad from "../Components/Ad";
 import CentralPost from "../Components/CentralPost/CentralPost";
 import LeftColumnHP from "../Components/LeftColumnHP";
+import RightColumnHp from "../Components/RightColumnHp";
 
 export default function Homepage() {
   return (
@@ -14,7 +14,7 @@ export default function Homepage() {
             <CentralPost />
           </div>
           <div className="col-2 ml-n3">
-            <Ad />
+            <RightColumnHp />
           </div>
         </div>
       </div>

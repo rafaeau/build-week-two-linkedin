@@ -1,6 +1,6 @@
 import React from "react";
 import "./CentralPost.css";
-import { CgProfile } from "react-icons/cg";
+import user from "./src/assets/user.jfif";
 import InputOptions from "./InputOptions";
 import { GoThumbsup } from "react-icons/go";
 import { FaRegCommentDots } from "react-icons/fa";
@@ -10,7 +10,7 @@ function Posts({ name, description, message, photoUrl }) {
   return (
     <div className="post">
       <div className="post-header">
-        <CgProfile />
+        <img src={user} alt="profile-image" className="profile-img-md" />
         <div className="post-info">
           <h2>{name}</h2>
           <p>{description}</p>

@@ -11,6 +11,10 @@
   margin-bottom: 20px;
 }
 
+/* .Central-input-container:hover {
+  background-color: whitesmoke;
+} */
+
 .Central-input {
   border: 1px solid lightgray;
   border-radius: 30px;

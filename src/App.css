@@ -332,18 +332,19 @@ body {
 }
 
 .thumbnail {
-    height: 60px;
+  height: 60px;
 }
 
 .videos-title {
-    font-size: 13px;
-    font-weight: 700;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .card-wrap {
   border-radius: 8px;
   width: 230px;
   background-color: white;
+  overflow: hidden;
 }
 
 #rightCol_Home {
@@ -353,45 +354,38 @@ body {
   background-color: white;
 }
 
-.innerDiv{
-  display:flex;
-  justify-content:space-between;
-  margin:auto;
-}
-
-.below{
+.innerDiv {
   display: flex;
-  flex-direction:column;
-
+  justify-content: space-between;
+  margin: auto;
 }
 
-.below_innerDiv{
-  display:inline-block;
-
-}
-
-.right_footer{
-  display:flex;
+.below {
+  display: flex;
   flex-direction: column;
-  width:444px;
-  margin-top:20px;
-  font-size:12px;
+}
+
+.below_innerDiv {
+  display: inline-block;
+}
+
+.right_footer {
+  display: flex;
+  flex-direction: column;
+  width: 444px;
+  margin-top: 20px;
+  font-size: 12px;
   line-height: 16px;
   font-weight: 400;
-   padding-left: 51%;
-padding-right: 51%;
+  padding-left: 51%;
+  padding-right: 51%;
 }
 
-
-.inner_footer{
-  display:flex;
+.inner_footer {
+  display: flex;
   justify-content: space-between;
- }
-
-.inner_footer > a{
-  color: rgb(145, 140, 140);
-  
 }
-  background-color: rgb(255, 255, 255);
-  overflow: hidden;
+
+.inner_footer > a {
+  color: rgb(145, 140, 140);
 }
