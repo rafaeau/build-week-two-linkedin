@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./CentralPost.css";
 import { IoMdCreate } from "react-icons/io";
+import user from "../../assets/user.jfif"
 import InputOptions from "./InputOptions";
 import { BiCalendar, BiImage } from "react-icons/bi";
 import { RiArticleFill, RiVideoFill } from "react-icons/ri";
@@ -27,6 +28,8 @@ function CentralPost() {
     <div className="centralPost">
       {/* START CENTRAL INPUT CONTAINER */}
       <div className="Central-input-container">
+        <div className="d-flex">
+        <div><img src={user} alt="profile-image" className="profile-pic-posts mt-2 ml-2"/></div>
         <div className="Central-input">
           <IoMdCreate />
           <form action="">
@@ -37,6 +40,7 @@ function CentralPost() {
             />
             <button /* onClick={sendPost}  */ type="submit">Send</button>
           </form>
+        </div>
         </div>
         <div className="Central-inputOptions">
           <InputOptions Icon={BiImage} title="Photo" color="#70B5F9" />
