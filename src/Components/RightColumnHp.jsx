@@ -1,6 +1,8 @@
 import "../App.css";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { FaDotCircle } from "react-icons/fa";
+import Ad from './Ad'
+
 export default function Homepage() {
   return (
     <>
@@ -29,6 +31,8 @@ export default function Homepage() {
           </h6>
         </div>
       </div>
+
+      <Ad/>
 
       <div className="right_footer">
         <div className="inner_footer">

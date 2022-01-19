@@ -348,9 +348,9 @@ body {
 }
 
 #rightCol_Home {
-  border: 0.5px rgb(228, 224, 224) solid;
-  border-radius: 10px;
-  width: 28rem;
+  border-radius: 8px;
+  width: 323px;
+  height: fit-content;
   background-color: white;
 }
 
@@ -389,3 +389,4 @@ body {
 .inner_footer > a {
   color: rgb(145, 140, 140);
 }
+

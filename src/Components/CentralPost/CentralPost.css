@@ -99,3 +99,8 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.profile-pic-posts {
+  height: 35px;
+  width: 35px;
+}

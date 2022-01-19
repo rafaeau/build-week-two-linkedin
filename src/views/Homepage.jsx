@@ -13,7 +13,7 @@ export default function Homepage() {
           <div className="col-6 ml-5 mt-4">
             <CentralPost />
           </div>
-          <div className="col-2 ml-n3">
+          <div className="col-2 ml-n4">
             <RightColumnHp />
           </div>
         </div>
