@@ -127,6 +127,20 @@ function CentralPost() {
       {/* MAP THE POSTS AFTER POSTING THEM IN FETCH */}
       {posts &&
         posts
+          .slice(1828, 1836)
+          .map((post) => (
+            <Posts
+              key={post._id}
+              id={post.user._id}
+              username={post.username}
+              title={post.user.title}
+              text={post.text}
+              createdAt={post.createdAt}
+            />
+          ))}
+
+      {posts &&
+        posts
           .slice(0, 20)
           .map((post) => (
             <Posts
