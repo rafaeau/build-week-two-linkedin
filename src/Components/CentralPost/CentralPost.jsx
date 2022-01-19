@@ -21,8 +21,7 @@ function CentralPost() {
   const [input, setInput] = useState("");
 
   useEffect(() => {
-    fetchPosts();
-    // sendPost();
+    fetchPosts().then((res) => setPosts(res));
   }, []);
 
   /* const sendPost = (e) => {
@@ -111,34 +110,17 @@ function CentralPost() {
       {/* START POSTS */}
 
       {/* MAP THE POSTS AFTER POSTING THEM IN FETCH */}
-      {posts.map((post) => (
-        <Posts
-        /* name={}
-          description={}
-          message={} */
-        />
-      ))}
+      {posts &&
+        posts
+          .slice(0, 20)
+          .map((post) => (
+            <Posts
+              username={post.username}
+              text={post.text}
+              createdAt={post.createdAt}
+            />
+          ))}
 
-      <Posts
-        name="Name Username"
-        description="test description default"
-        message="Look at this right now!"
-      />
-      <Posts
-        name="Name Username"
-        description="test description default"
-        message="Look at this right now!"
-      />
-      <Posts
-        name="Name Username"
-        description="test description default"
-        message="Look at this right now!"
-      />
-      <Posts
-        name="Name Username"
-        description="test description default"
-        message="Look at this right now!"
-      />
       {/* END POSTS */}
     </div>
   );
