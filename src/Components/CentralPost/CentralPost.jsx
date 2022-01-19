@@ -142,7 +142,9 @@ function CentralPost() {
       {/* DISPLAY OUR POST */}
       {posts &&
         posts
-          .slice(1837, 1844)
+          .reverse()
+          .filter((post) => post.user)
+          .slice(0, 10)
           .map((post) => (
             <Posts
               key={post._id}
