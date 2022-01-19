@@ -1,6 +1,6 @@
 .centralPost {
   flex: 0.6;
-  margin: 0 20px;
+  margin: 2px 30px;
 }
 
 .Central-input-container {
@@ -59,6 +59,7 @@
 
 .inputOption > h4 {
   margin-left: 5px;
+  font-size: 18px;
 }
 
 .post {

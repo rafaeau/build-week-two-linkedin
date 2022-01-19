@@ -10,10 +10,10 @@ export default function Homepage() {
           <div className="col-2">
             <LeftColumnHP />
           </div>
-          <div className="col-7">
+          <div className="col-6 ml-5 mt-4">
             <CentralPost />
           </div>
-          <div className="col-3">
+          <div className="col-2 ml-n3">
             <Ad />
           </div>
         </div>
