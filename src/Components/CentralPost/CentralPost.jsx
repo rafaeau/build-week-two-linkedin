@@ -125,9 +125,10 @@ function CentralPost() {
       {/* START POSTS */}
 
       {/* MAP THE POSTS AFTER POSTING THEM IN FETCH */}
+
       {posts &&
         posts
-          .slice(1828, 1836)
+          .slice(0, 10)
           .map((post) => (
             <Posts
               key={post._id}
@@ -138,10 +139,10 @@ function CentralPost() {
               createdAt={post.createdAt}
             />
           ))}
-
+      {/* DISPLAY OUR POST */}
       {posts &&
         posts
-          .slice(0, 20)
+          .slice(1837, 1844)
           .map((post) => (
             <Posts
               key={post._id}
