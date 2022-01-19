@@ -242,6 +242,19 @@ body {
   width: 50px;
 }
 
+.profile-img-md-wrap {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: solid 2px white;
+}
+
+.profile-img-md {
+  height: 65px;
+  width: 65px;
+}
+
 .single-profile-wrap {
   display: flex;
   border-radius: 8px;
@@ -320,4 +333,10 @@ body {
 .videos-title {
     font-size: 13px;
     font-weight: 700;
+}
+
+.first-card-wrap {
+  border-radius: 8px;
+  width: 230px;
+  background-color: white;
 }

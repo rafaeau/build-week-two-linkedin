@@ -1,11 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
 import Header from "./Components/Header"
 import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Profile from "./views/Profile";
+import Homepage from "./views/Homepage";
 import ProfileExperiences from "./views/ProfileExperiences";
 
 
@@ -15,7 +13,7 @@ function App() {
     <BrowserRouter>
         <Header />
       <Routes>
-        <Route exact path='/' element={<Profile/>} />
+        <Route exact path='/' element={<Homepage/>} />
         <Route exact path='/profile/:userId/experiences' element={<ProfileExperiences/>} />
       </Routes>
         <Footer />
