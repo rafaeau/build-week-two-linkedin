@@ -6,14 +6,18 @@ import { GoThumbsup } from "react-icons/go";
 import { FaRegCommentDots } from "react-icons/fa";
 import { RiShareForwardLine, RiSendPlaneLine } from "react-icons/ri";
 import { format, parseISO } from "date-fns";
+import { Link } from "react-router-dom";
 
-function Posts({ username, text, createdAt }) {
+function Posts({ username, text, createdAt, id, title }) {
   return (
     <div className="post">
       <div className="post-header">
         <img src={user} alt="profile-image" className="profile-pic-posts" />
         <div className="post-info">
-          <h2>{username}</h2>
+          <Link to={"/profile/" + id + "/experiences"}>
+            <h6 className="username-Central">{username}</h6>
+          </Link>
+          <div className="small-grey-txt mt-2 text-center">{title}</div>
 
           <p>{format(parseISO(createdAt), "dd/mm/yyyy - HH:mm")}</p>
         </div>

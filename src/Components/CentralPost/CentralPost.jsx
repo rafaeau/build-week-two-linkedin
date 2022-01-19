@@ -61,7 +61,7 @@ function CentralPost() {
                       className="profile-pic-posts mt-2 ml-2"
                     />
                     <div className="d-flex flex-column mt-n2">
-                      <h6 className="mt-3 mb-n1 text-center">Username</h6>
+                      <h6 className="mt-3 my-2 mb-n1 text-center">Username</h6>
                       <button className="button-modal">
                         <BiWorld /> Anyone <RiArrowDownSFill />
                       </button>
@@ -115,7 +115,10 @@ function CentralPost() {
           .slice(0, 20)
           .map((post) => (
             <Posts
+              key={post._id}
+              id={post.user._id}
               username={post.username}
+              title={post.user.title}
               text={post.text}
               createdAt={post.createdAt}
             />
