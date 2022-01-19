@@ -1,5 +1,4 @@
 import Ad from '../Components/Ad';
-import adImg from '../assets/linkedin-ad.jpg'
 
 export default function Homepage() {
     return (
@@ -7,7 +6,7 @@ export default function Homepage() {
             <div className='container'>
                 <div className='row'>
                     <div className="col-2">
-                        
+                        <LeftColumnHP/>
                     </div>
                     <div className="col-7">
                         
