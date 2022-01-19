@@ -18,6 +18,7 @@ function CentralPost() {
   const sendPost = (e) => {
     //e.preventDefault();
     postNewPost();
+    setPosts(posts);
   };
 
   return (
