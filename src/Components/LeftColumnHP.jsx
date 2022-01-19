@@ -1,3 +1,5 @@
+import adImg from '../assets/linkedin-ad.jpg'
+import RightColumnHp from './RightColumnHp'
 import user from '../assets/user.jfif'
 import { RiCheckboxBlankFill } from 'react-icons/ri'
 import { BsFillBookmarkFill } from 'react-icons/bs'
@@ -39,6 +41,7 @@ export default function LeftColumnHP() {
                 <hr className="mt-n1" />
                 <h5 className="see-more mb-0" style={{fontSize: '16px'}}>Discover more</h5>
             </div>
+            <RightColumnHp/>
         </>
     )
 }
