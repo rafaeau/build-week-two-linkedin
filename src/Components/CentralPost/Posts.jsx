@@ -8,11 +8,18 @@ import { RiShareForwardLine, RiSendPlaneLine } from "react-icons/ri";
 import { format, parseISO } from "date-fns";
 import { Link } from "react-router-dom";
 
-function Posts({ username, text, createdAt, id, title }) {
+function Posts(props) {
+  const { username, text, createdAt, id, title, image } = props;
+
+  console.log(Object.keys(props));
   return (
     <div className="post">
+      <img
+        src={image}
+        alt="profile-image"
+        style={{ width: "100%", height: 300 }}
+      />
       <div className="post-header">
-        <img src={user} alt="profile-image" className="profile-pic-posts" />
         <div className="post-info">
           <Link to={"/profile/" + id + "/experiences"}>
             <h6 className="username-Central">{username}</h6>
