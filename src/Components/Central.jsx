@@ -11,11 +11,11 @@ function Central(props) {
     <>
       {/* START CENTRAL COMPONENTS */}
 
-      <div id="Central-Main-Component" className="row my-5 mx-auto">
+      <div id="Central-Main-Component bg-white" className="row my-5 mx-auto">
         {/* 1st div container with avatar img */}
         <div
           id="Central-firstDiv"
-          className="col-2 col-md-10 Central-container d-flex justify-content-center align-items-center mt-5 mx-auto"
+          className="col-2 col-md-10 bg-white Central-container d-flex justify-content-center align-items-center mt-5 mx-auto"
         >
           <div>
             <img
@@ -26,7 +26,8 @@ function Central(props) {
             />
             <img
               id="Central-avatar"
-              src="https://th.bing.com/th/id/OIP.scExuNqSeL_zvoAQbH0gWAHaHa?w=199&h=199&c=7&r=0&o=5&pid=1.7"
+              src={props?.user.image}
+              style={{ width: "200px", height: "200px", right: "5px" }}
               alt=""
             />
             <BiPencil id="Central-pencil1" />
@@ -34,7 +35,9 @@ function Central(props) {
               <div className="mx-2 px-2 d-flex flex-column justify-content-start ">
                 <div className="d-flex flex-row justify-content-between">
                   <div className="d-flex flex-row mt-5">
-                    <h3 className="h3">{props?.user.name} {props?.user.surname} </h3>
+                    <h3 className="h3 my-2">
+                      {props?.user.name} {props?.user.surname}{" "}
+                    </h3>
                   </div>
                   <div className="d-flex justify-content-start align-items-center mx-2 px-1">
                     <img
@@ -54,8 +57,9 @@ function Central(props) {
                   <BiPencil id="" className="Central-pencil2" />
                 </div>
 
-                <h6 className="text-semibold">Random stuff about {props?.user.name}</h6>
-                
+                <h6 className="text-semibold">
+                  Random stuff about {props?.user.name}
+                </h6>
 
                 <a className="Central-p1 my-2 text-muted" href="#">
                   Strive school
@@ -82,7 +86,7 @@ function Central(props) {
         {/* End 1st div container with avatar img */}
 
         {/* Start 2th Central div container */}
-        <div className="col-2 col-md-10 Central-container Border-blue mt-4 mx-auto ml-3 py-4 ">
+        <div className="col-2 col-md-10 bg-white Central-container Border-blue mt-4 mx-auto ml-3 py-4 ">
           <div className="d-flex justify-content-between">
             <div className="d-flex flex-row align-items-center mx-2 px-2">
               <img
@@ -189,23 +193,21 @@ function Central(props) {
         {/* Start 4th Central div container */}
         <div
           id="Central-Second"
-          className="col-2 col-md-10 Central-container mt-4 mx-auto ml-3 py-4 "
+          className="col-2 col-md-10 bg-white Central-container mt-4 mx-auto ml-3 py-4 "
         >
           <div className="d-flex flex-row justify-content-between mx-2 px-2 ">
             <h4 className="text-semibold">About</h4>
             <BiPencil id="" className="Central-pencil2" />
           </div>
           <div className="d-flex flex-column justify-content-start mt-4 mx-2 px-2 ">
-            <p className="Central-p1 text-muted">
-            {props?.user.bio}
-            </p>
+            <p className="Central-p1 text-muted">{props?.user.bio}</p>
           </div>
         </div>
         {/* End 4th Central div container */}
         {/* Start 5th Central div container */}
         <div
           id="Central-Second"
-          className="col-2 col-md-10 Central-container d-flex flex-column justify-content-start mt-4 mx-auto ml-3 py-4"
+          className="col-2 col-md-10 bg-white Central-container d-flex flex-column justify-content-start mt-4 mx-auto ml-3 py-4"
         >
           <div className="mx-2 px-2">
             <h4 className="text-semibold">Activity</h4>
@@ -285,7 +287,7 @@ function Central(props) {
         </div>
         {/* End 5th  Central div container */}
         {/* Start 6th Central div container */}
-       <Experience experiences={props.experiences} />
+        <Experience experiences={props.experiences} />
         {/* End 6th Central div container
          */}
       </div>
