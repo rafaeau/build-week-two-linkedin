@@ -3,23 +3,31 @@ import "./CentralPost.css";
 import { IoMdCreate } from "react-icons/io";
 import user from "../../assets/user.jfif";
 import InputOptions from "./InputOptions";
-import { BiCalendar, BiImage, BiWorld } from "react-icons/bi";
+import { BiCalendar, BiImage, BiImageAdd, BiWorld } from "react-icons/bi";
 import { RiArrowDownSFill, RiArticleFill, RiVideoFill } from "react-icons/ri";
 import Posts from "./Posts";
-import { fetchPosts, postNewPost } from "../../apicalls";
+import { fetchPosts, handleSubmission } from "../../apicalls";
 import { Button, Modal } from "react-bootstrap";
 import { AiOutlineClose } from "react-icons/ai";
+import { useParams } from "react-router-dom";
 
-function CentralPost() {
+function CentralPost(props) {
+  let { userId } = useParams();
   const [show, setShow] = useState(false);
   const [input, setInput] = useState("");
+  const [image, setImage] = useState({ image: "" });
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     fetchPosts().then((res) => setPosts(res));
+  }, []);
+
+  useEffect(() => {
+    fetchImgPost(userId).then((res) => setImage(res));
   }, []);
 
   const [postText, setPostText] = useState("");
@@ -51,6 +59,38 @@ function CentralPost() {
     }
   };
 
+  const formData = new FormData();
+
+  const handleSubmission = (e) => {
+    console.log(e.target.files[0]);
+    if (e.target && e.target.files[0])
+      formData.append("File", e.target.files[0]);
+  };
+
+  const fetchImgPost = async (userId, expId) => {
+    try {
+      const resp = await fetch(
+        `https://striveschool-api.herokuapp.com/api/profile/${userId}/experiences/${expId}/picture`,
+        {
+          headers: {
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiMjFmMTRiYjUzZDAwMTViMTllZDciLCJpYXQiOjE2NDI0NDE3ODksImV4cCI6MTY0MzY1MTM4OX0.c8a_yy-ROyiriWmK5LnQYY8Gmrz8smjTnxvGxtDu-24",
+          },
+          method: "POST",
+          body: formData,
+        }
+      );
+      if (resp.ok) {
+        const PostedImg = await resp.json();
+        return PostedImg;
+      } else {
+        console.log("your fetch did not go well!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="centralPost">
       {/* START CENTRAL INPUT CONTAINER */}
@@ -58,7 +98,7 @@ function CentralPost() {
         <div className="d-flex">
           <div>
             <img
-              src={user}
+              src={props.image ? props.image : user}
               alt="profile-image"
               className="profile-pic-posts mt-2 ml-2"
             />
@@ -109,8 +149,20 @@ function CentralPost() {
             </form>
           </div>
         </div>
+
+        {/* <InputOptions Icon={BiImage} title="Photo" color="#70B5F9" /> */}
+
+        <div>
+          <input
+            type="file"
+            name="file"
+            onClick={(e) => setImage((image = e.currentTarget.files[0]))}
+            //onChange={handleSubmission}
+          />
+          <button onClick={fetchImgPost}>Submit</button>
+        </div>
+
         <div className="Central-inputOptions">
-          <InputOptions Icon={BiImage} title="Photo" color="#70B5F9" />
           <InputOptions Icon={RiVideoFill} title="Videos" color="#7FC15E" />
           <InputOptions Icon={BiCalendar} title="Event" color="#E7A33E" />
           <InputOptions
@@ -160,5 +212,4 @@ function CentralPost() {
     </div>
   );
 }
-
 export default CentralPost;
