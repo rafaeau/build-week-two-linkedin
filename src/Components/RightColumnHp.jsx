@@ -27,7 +27,9 @@ export default function Homepage() {
           </div>
 
           <h6 className="ml-3" style={{ marginTop: "-14px" }}>
-            <span style={{ color: "#5E5E5E" }}>2d ago • 1867, readers</span>
+            <span className="small-grey-txt" style={{ color: "#5E5E5E" }}>
+              2d ago • 1867, readers
+            </span>
           </h6>
         </div>
       </div>
