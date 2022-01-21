@@ -1,10 +1,9 @@
 import React from "react";
 import "./CentralPost.css";
 
-function InputOptions({ Icon, title, color /* type, name, onChange */ }) {
+function InputOptions({ Icon, title, color }) {
   return (
     <div className="inputOption">
-      {/* <input type name onChange /> */}
       <Icon style={{ color: color }} className="mt-n2" />
       <h4>{title}</h4>
     </div>

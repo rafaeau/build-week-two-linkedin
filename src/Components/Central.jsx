@@ -11,11 +11,11 @@ function Central(props) {
     <>
       {/* START CENTRAL COMPONENTS */}
 
-      <div id="Central-Main-Component bg-white" className="row my-5 mx-auto">
+      <div id="Central-Main-Component bg-white" className="row mx-auto">
         {/* 1st div container with avatar img */}
         <div
           id="Central-firstDiv"
-          className="col-2 col-md-10 bg-white Central-container d-flex justify-content-center align-items-center mt-5 mx-auto"
+          className="col-2 col-md-10 bg-white Central-container d-flex justify-content-center align-items-center mx-auto"
         >
           <div>
             <img

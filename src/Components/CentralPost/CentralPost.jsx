@@ -3,18 +3,17 @@ import "./CentralPost.css";
 import { IoMdCreate } from "react-icons/io";
 import user from "../../assets/user.jfif";
 import InputOptions from "./InputOptions";
-import { BiCalendar, BiWorld } from "react-icons/bi";
+import { BiCalendar, BiImage, BiWorld } from "react-icons/bi";
 import { RiArrowDownSFill, RiArticleFill, RiVideoFill } from "react-icons/ri";
 import Posts from "./Posts";
-import { fetchPosts } from "../../apicalls";
+import { fetchPosts, fetchProfiles } from "../../apicalls";
 import { Button, Modal } from "react-bootstrap";
 import { AiOutlineClose } from "react-icons/ai";
 import { useParams } from "react-router-dom";
 
-function CentralPost({}) {
+function CentralPost(props) {
   const [show, setShow] = useState(false);
   const [input, setInput] = useState("");
-  let { userId } = useParams();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -25,6 +24,13 @@ function CentralPost({}) {
   useEffect(() => {
     fetchPosts().then((res) => setPosts(res));
   }, []);
+
+  const [profiles, setProfiles] = useState();
+  const params = useParams();
+
+  useEffect(() => {
+    fetchProfiles().then((res) => setProfiles(res));
+  }, [params]);
 
   const [postText, setPostText] = useState("");
   const whatever = { text: postText };
@@ -110,21 +116,31 @@ function CentralPost({}) {
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header>
                   <Modal.Title>Create a post</Modal.Title>
-                  <AiOutlineClose onClick={handleClose} />
+                  <AiOutlineClose
+                    className="cursor-pointer"
+                    onClick={handleClose}
+                  />
                 </Modal.Header>
                 <Modal.Body>
                   <div className="d-flex">
-                    <img
-                      src={user}
-                      alt="profile-image"
-                      className="profile-pic-posts mt-2 ml-2"
-                    />
-                    <div className="d-flex flex-column mt-n2">
-                      <h6 className="mt-3 my-2 mb-n1 text-center">Username</h6>
-                      <button className="button-modal">
-                        <BiWorld /> Anyone <RiArrowDownSFill />
-                      </button>
-                    </div>
+                    {profiles &&
+                      profiles.slice(301, 302).map((profile) => (
+                        <>
+                          <img
+                            src={user}
+                            alt="profile-image"
+                            className="profile-pic-posts mt-2 ml-2"
+                          />
+                          <div className="d-flex flex-column mt-n2 ml-2">
+                            <h6 className="mt-3 my-2 mb-n1 text-center">
+                              {profile.name} {profile.surname}
+                            </h6>
+                            <button className="button-modal mt-3">
+                              <BiWorld /> Anyone <RiArrowDownSFill />
+                            </button>
+                          </div>
+                        </>
+                      ))}
                   </div>
                   <input
                     placeholder="What do you want to talk about?"
@@ -132,6 +148,7 @@ function CentralPost({}) {
                     type="text"
                     className="input-modal"
                   />
+                  <input type="file" name="file" onChange={handleSubmission} />
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>
@@ -148,36 +165,12 @@ function CentralPost({}) {
           </div>
         </div>
 
-        <div>
-          <input type="file" name="file" onChange={handleSubmission} />
-        </div>
-
         <div className="Central-inputOptions">
-          {/* <InputOptions
-            type="file" name="file" onChange={handleSubmission} Icon={
-              BiImage
-            }
-            title="Photo"
-            color="#70B5F9"
-          /> */}
+          <InputOptions Icon={BiImage} title="Photo" color="#70B5F9" />
+          <InputOptions Icon={RiVideoFill} title="Videos" color="#7FC15E" />
+          <InputOptions Icon={BiCalendar} title="Event" color="#E7A33E" />
           <InputOptions
-            /* type="file" name="file" onChange={handleSome} */ Icon={
-              RiVideoFill
-            }
-            title="Videos"
-            color="#7FC15E"
-          />
-          <InputOptions
-            /* type="file" name="file" onChange={handleSome} */ Icon={
-              BiCalendar
-            }
-            title="Event"
-            color="#E7A33E"
-          />
-          <InputOptions
-            /* type="file" name="file" onChange={handleSome} */ Icon={
-              RiArticleFill
-            }
+            Icon={RiArticleFill}
             title="Write article"
             color="#FC9295"
           />
@@ -185,30 +178,11 @@ function CentralPost({}) {
       </div>
       {/* END CENTRAL INPUT CONTAINER */}
 
-      {/* START POSTS */}
-
-      {/* MAP THE POSTS AFTER POSTING THEM IN FETCH */}
-
-      {/*  {posts &&
-        posts
-          .slice(0, 10)
-          .map((post) => (
-            <Posts
-              key={post._id}
-              id={post.user._id}
-              username={post.username}
-              title={post.user.title}
-              text={post.text}
-              createdAt={post.createdAt}
-            />
-          ))}
-       */}
-
       {/* DISPLAY OUR POST */}
       {posts &&
         posts
-
-          .filter((post) => post.user)
+          .slice(307, 325)
+          .filter((post) => post.image)
           .map((post) => <Posts key={post._id} {...post} />)}
 
       {/* END POSTS */}
