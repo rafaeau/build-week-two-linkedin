@@ -18,7 +18,7 @@
   flex-grow: 1;
   margin-right: 50px;
 }
-.header__left > img {
+#Logo-img {
   object-fit: contain;
   height: 40px;
   margin-right: 10px;

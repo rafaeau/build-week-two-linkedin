@@ -6,7 +6,7 @@ import PeopleYouMayKnow from "./PeopleYouMayKnow";
 
 const Sidebar = () => {
   return (
-    <div className="d-none d-md-block col-md-2">
+    <div className="d-none d-lg-block col-lg-2">
       <LanguageBar />
       <Ad />
       <PeopleAlsoViewed btn={"Message"} />

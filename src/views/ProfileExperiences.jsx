@@ -18,9 +18,6 @@ function ProfileExperiences() {
     fetchUser(userId).then((res) => setUser(res));
   }, []);
 
-  {
-    console.log(user);
-  }
   return (
     <>
       <div className="container">
@@ -29,7 +26,7 @@ function ProfileExperiences() {
             <Central experiences={experiences} user={user} />
           </div>
           <div className="col-2">
-            <Sidebar />
+            <Sidebar experiences={experiences} user={user} />
           </div>
         </div>
       </div>

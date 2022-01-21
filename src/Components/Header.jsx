@@ -13,6 +13,8 @@ import { BiUserCircle } from "react-icons/bi";
 import { HiUsers } from "react-icons/hi";
 import HeaderOption from "./HeaderOption";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Homepage from "../views/Homepage";
 
 function Header() {
   return (
@@ -26,11 +28,14 @@ function Header() {
     >
       <div className="header">
         <div className="header__left">
-          <img
-            src="https://www.iconpacks.net/icons/2/free-linkedin-logo-icon-2430-thumb.png"
-            alt=""
-            srcset=""
-          />
+          <Link to="/" element={<Homepage />}>
+            <img
+              id="Logo-img"
+              src="https://www.iconpacks.net/icons/2/free-linkedin-logo-icon-2430-thumb.png"
+              alt=""
+              srcset=""
+            />
+          </Link>
           <div className="header__search">
             <BsSearch />
             <input className="ml-1" type="text" placeholder="Search" />

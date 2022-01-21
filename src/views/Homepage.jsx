@@ -18,13 +18,13 @@ export default function Homepage() {
     <>
       <div className="container">
         <div className="row homepage">
-          <div className="d-none d-md-block col-md-2">
+          <div className="d-none d-lg-block col-md-2">
             <LeftColumnHP user={user} />
           </div>
           <div className="col-sm-12 col-md-6 ml-5 mt-4">
             <CentralPost />
           </div>
-          <div className="col-sm-6 mx-xs-auto ml-md-n4 d-md-block col-md-2">
+          <div className="col-sm-6 mx-xs-auto ml-md-n4 d-lg-block col-md-2">
             <RightColumnHp />
           </div>
         </div>
