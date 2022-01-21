@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { BiWorld } from "react-icons/bi";
 
 function Posts(props) {
-  const { text, createdAt, title, image, user } = props;
+  const { text, createdAt, image, user } = props;
   return (
     <div className="post">
       <div className="d-flex">

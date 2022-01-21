@@ -86,7 +86,7 @@ export default function LeftColumnHP(props) {
         </div>
       </div>
 
-      <div className="mt-2 pt-1 card-wrap">
+      <div className="mt-2 pt-1 card-wrap Sticky-Position">
         <div className="small-grey-txt mx-3 mt-2" style={{ color: "black" }}>
           Recent
         </div>

@@ -74,11 +74,11 @@ function Central(props) {
                 id="Central-buttons-container"
                 className="d-flex justify-content-start align-items-center my-4"
               >
-                <button className="Central-btn-blue mx-2 px-3">Open to</button>
-                <button className="Central-btn-grey mx-2 px-3">
-                  Add section
+                <button className="lng-btn lng-btn-spa mx-2 px-3">
+                  Open to
                 </button>
-                <button className="Central-btn-round mx-2 px-3">More</button>
+                <button className="lng-btn mx-2 px-3">Add section</button>
+                <button className="lng-btn mx-2 px-3">More</button>
               </div>
             </div>
           </div>

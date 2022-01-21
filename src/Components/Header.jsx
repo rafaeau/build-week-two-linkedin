@@ -22,6 +22,7 @@ function Header() {
         backgroundColor: "white",
         borderBottom: "0.1px solid lightgrey",
       }}
+      id="sticky-nav"
     >
       <div className="header">
         <div className="header__left">

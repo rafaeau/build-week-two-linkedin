@@ -84,6 +84,7 @@
 .Central-btn-blue {
   color: white;
   background-color: #0a66c2;
+  border: none;
   border-radius: 99px;
   padding: 2px 10px;
 }
@@ -213,8 +214,9 @@ body {
   border-radius: 25px;
 }
 
-#lng-btn:hover {
-  background-color: #f1f1f1;
+.lng-btn:hover {
+  background-color: lightgray;
+  color: black;
 }
 
 .lng-btn-spa {
@@ -359,6 +361,17 @@ body {
   background-color: white;
 }
 
+.Sticky-Position {
+  position: sticky !important;
+  top: 80px !important;
+}
+
+#sticky-nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 30;
+}
+
 .innerDiv {
   display: flex;
   justify-content: space-between;
@@ -374,7 +387,7 @@ body {
   display: inherit;
 }
 
-.below:hover{
+.below:hover {
   cursor: pointer;
   background-color: rgb(185, 185, 184);
 }

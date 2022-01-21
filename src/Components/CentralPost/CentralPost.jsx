@@ -181,7 +181,7 @@ function CentralPost(props) {
       {/* DISPLAY OUR POST */}
       {posts &&
         posts
-          .slice(307, 325)
+          .slice(313, 325)
           .filter((post) => post.image)
           .map((post) => <Posts key={post._id} {...post} />)}
 
