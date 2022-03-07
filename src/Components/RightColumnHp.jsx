@@ -8,7 +8,7 @@ export default function Homepage() {
     <>
       <div className="mt-4 pt-1" id="rightCol_Home">
         <div className=" innerDiv mx-3 mt-2 mb-2">
-          <h5 className="mr-2" style={{ fontWeight: "bold", fontSize: "16px" }}>
+          <h5 className="mr-2" style={{ fontWeight: "bold", fontSize: "16 px" }}>
             <span>LinkedIn News</span>
           </h5>
           <BsFillInfoSquareFill />
