@@ -11,11 +11,11 @@ function Central(props) {
     <>
       {/* START CENTRAL COMPONENTS */}
 
-      <div id="Central-Main-Component bg-white" className="row my-5 mx-auto">
+      <div id="Central-Main-Component bg-white" className="row mx-auto">
         {/* 1st div container with avatar img */}
         <div
           id="Central-firstDiv"
-          className="col-2 col-md-10 bg-white Central-container d-flex justify-content-center align-items-center mt-5 mx-auto"
+          className="col-2 col-md-10 bg-white Central-container d-flex justify-content-center align-items-center mx-auto"
         >
           <div>
             <img
@@ -74,11 +74,11 @@ function Central(props) {
                 id="Central-buttons-container"
                 className="d-flex justify-content-start align-items-center my-4"
               >
-                <button className="Central-btn-blue mx-2 px-3">Open to</button>
-                <button className="Central-btn-grey mx-2 px-3">
-                  Add section
+                <button className="lng-btn lng-btn-spa mx-2 px-3">
+                  Open to
                 </button>
-                <button className="Central-btn-round mx-2 px-3">More</button>
+                <button className="lng-btn mx-2 px-3">Add section</button>
+                <button className="lng-btn mx-2 px-3">More</button>
               </div>
             </div>
           </div>
